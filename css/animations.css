@@ -1,0 +1,156 @@
+/* Animations */
+@keyframes circuitMove {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-50px) translateX(-50px);
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Cyberpunk Styles */
+.hero h1 {
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.hero h1::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 var(--accent-color);
+    top: 0;
+    color: var(--text-color);
+    background: var(--bg-color);
+    overflow: hidden;
+    animation: glitch 5s infinite;
+}
+
+.hero h2 {
+    font-family: 'JetBrains Mono', monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--accent-color);
+    width: 0;
+    animation: typing 3.5s steps(40, end) forwards,
+               blink .75s step-end infinite;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        var(--accent-color),
+        var(--primary-color));
+    z-index: -1;
+    background-size: 400%;
+    animation: borderGlow 6s linear infinite;
+}
+
+.btn:hover::before {
+    animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Card Effects */
+.card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--primary-color),
+        transparent
+    );
+    transform: rotate(45deg);
+    opacity: 0.1;
+    transition: all 0.6s;
+}
+
+.card:hover::before {
+    left: 0;
+    opacity: 0.2;
+}
+
+/* Icon Styles */
+.icon-network, .icon-server, .icon-odoo {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
