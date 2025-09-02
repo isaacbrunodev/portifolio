@@ -3,25 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos - [SEU_NOME]</title>
+    <title>Projetos - Isaac Bruno Monte Santos</title>
+    <meta name="description" content="Portfólio de projetos em TI, infraestrutura, Odoo ERP e automação. Casos de sucesso e soluções implementadas para empresas.">
+    <meta name="keywords" content="projetos TI, casos de sucesso, Odoo ERP, infraestrutura, automação, portfólio">
+    <meta name="author" content="Isaac Bruno Monte Santos">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://isaacbrunodev.github.io/projetos.html">
+    <meta property="og:title" content="Projetos - Isaac Bruno Monte Santos">
+    <meta property="og:description" content="Portfólio de projetos em TI, infraestrutura, Odoo ERP e automação.">
+    <meta property="og:image" content="https://isaacbrunodev.github.io/images/profile.jpg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <nav class="main-nav">
-            <div class="logo">[SEU_NOME]</div>
+            <a href="./index.html" class="logo" style="cursor: pointer;">Isaac Bruno Monte Santos</a>
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+                <li role="none"><a href="sobre.html" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="servicos.html" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="projetos.html" role="menuitem" aria-current="page">Projetos</a></li>
+                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -29,54 +49,134 @@
     <main class="container">
         <section class="projetos">
             <h1>Meus Projetos</h1>
-            <p class="intro">Conheça alguns dos projetos que desenvolvi para clientes em diferentes setores.</p>
+            <p class="intro">Alguns dos projetos que desenvolvi e implementei para clientes e empresas.</p>
 
             <div class="projetos-grid">
                 <article class="projeto-card">
                     <div class="projeto-img">
-                        <img src="[IMAGEM_PROJETO_1]" alt="[NOME_PROJETO_1]">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop&crop=center" alt="Sistema ERP para Clínica Médica" loading="lazy">
                     </div>
                     <div class="projeto-content">
-                        <h2>[NOME_PROJETO_1]</h2>
-                        <p class="projeto-desc">[DESCRICAO_PROJETO_1]</p>
+                        <h3>Sistema ERP para Clínica Médica</h3>
+                        <p>Implementação completa do Odoo ERP para uma clínica médica, incluindo módulos de agendamento, prontuário eletrônico, faturamento e integração com sistemas de pagamento.</p>
                         <div class="tecnologias">
-                            <h3>Tecnologias Utilizadas:</h3>
                             <ul>
-                                <li>[TECH_1]</li>
-                                <li>[TECH_2]</li>
-                                <li>[TECH_3]</li>
+                                <li>Odoo 16</li>
+                                <li>Python</li>
+                                <li>PostgreSQL</li>
+                                <li>Docker</li>
                             </ul>
                         </div>
                         <div class="projeto-links">
-                            <a href="[LINK_LIVE_1]" class="btn primary" target="_blank" rel="noopener">Ver Projeto</a>
-                            <a href="[LINK_GITHUB_1]" class="btn secondary" target="_blank" rel="noopener">Código Fonte</a>
+                            <a href="contato.html" class="btn secondary">Saiba Mais</a>
                         </div>
                     </div>
                 </article>
 
                 <article class="projeto-card">
                     <div class="projeto-img">
-                        <img src="[IMAGEM_PROJETO_2]" alt="[NOME_PROJETO_2]">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop&crop=center" alt="Infraestrutura de Rede Corporativa" loading="lazy">
                     </div>
                     <div class="projeto-content">
-                        <h2>[NOME_PROJETO_2]</h2>
-                        <p class="projeto-desc">[DESCRICAO_PROJETO_2]</p>
+                        <h3>Infraestrutura de Rede Corporativa</h3>
+                        <p>Redesign completo da infraestrutura de rede para uma empresa com 200+ usuários, implementando VLANs, QoS, firewall e sistema de monitoramento.</p>
                         <div class="tecnologias">
-                            <h3>Tecnologias Utilizadas:</h3>
                             <ul>
-                                <li>[TECH_1]</li>
-                                <li>[TECH_2]</li>
-                                <li>[TECH_3]</li>
+                                <li>Cisco</li>
+                                <li>pfSense</li>
+                                <li>Zabbix</li>
+                                <li>VLANs</li>
                             </ul>
                         </div>
                         <div class="projeto-links">
-                            <a href="[LINK_LIVE_2]" class="btn primary" target="_blank" rel="noopener">Ver Projeto</a>
-                            <a href="[LINK_GITHUB_2]" class="btn secondary" target="_blank" rel="noopener">Código Fonte</a>
+                            <a href="contato.html" class="btn secondary">Saiba Mais</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Adicione mais projetos seguindo o mesmo padrão -->
+                <article class="projeto-card">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop&crop=center" alt="Migração para Cloud com Docker" loading="lazy">
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Migração para Cloud com Docker</h3>
+                        <p>Migração de aplicações legadas para ambiente cloud utilizando Docker e Kubernetes, implementando CI/CD e monitoramento automatizado.</p>
+                        <div class="tecnologias">
+                            <ul>
+                                <li>Docker</li>
+                                <li>Kubernetes</li>
+                                <li>GitLab CI</li>
+                                <li>Prometheus</li>
+                            </ul>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="contato.html" class="btn secondary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop&crop=center" alt="Sistema de Automação de Backups" loading="lazy">
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Sistema de Automação de Backups</h3>
+                        <p>Desenvolvimento de sistema automatizado de backup com Python, incluindo verificação de integridade, notificações e restauração rápida.</p>
+                        <div class="tecnologias">
+                            <ul>
+                                <li>Python</li>
+                                <li>Shell Script</li>
+                                <li>Rsync</li>
+                                <li>Telegram API</li>
+                            </ul>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="contato.html" class="btn secondary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop&crop=center" alt="Implementação de Segurança Avançada" loading="lazy">
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Implementação de Segurança Avançada</h3>
+                        <p>Auditoria de segurança e implementação de políticas de segurança, firewall de próxima geração e sistema de detecção de intrusão.</p>
+                        <div class="tecnologias">
+                            <ul>
+                                <li>Palo Alto</li>
+                                <li>Suricata</li>
+                                <li>ELK Stack</li>
+                                <li>OpenVPN</li>
+                            </ul>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="contato.html" class="btn secondary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center" alt="Dashboard de Monitoramento" loading="lazy">
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Dashboard de Monitoramento</h3>
+                        <p>Criação de dashboard centralizado para monitoramento de infraestrutura, aplicações e métricas de negócio com alertas inteligentes.</p>
+                        <div class="tecnologias">
+                            <ul>
+                                <li>Grafana</li>
+                                <li>InfluxDB</li>
+                                <li>Telegraf</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="contato.html" class="btn secondary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -84,10 +184,10 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="social-links">
-                <a href="[LINK_LINKEDIN]" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="[LINK_GITHUB]" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/isaac-bruno-m-a5b990219/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/isaacbrunodev" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <p class="copyright">&copy; <span id="year">2025</span> [SEU_NOME]. Todos os direitos reservados.</p>
+            <p class="copyright">&copy; <span id="year">2025</span> Isaac Bruno Monte Santos. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
