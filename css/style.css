@@ -1166,6 +1166,10 @@ h3 {
     animation: slideUp 0.3s ease-out;
 }
 
+.mobile-popup.show {
+    display: block;
+}
+
 @keyframes slideUp {
     from {
         opacity: 0;

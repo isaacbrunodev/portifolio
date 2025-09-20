@@ -79,40 +79,42 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe stats section when it exists
-document.addEventListener('DOMContentLoaded', () => {
-    const statsSection = document.querySelector('.stats');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
-}
 
 // Mobile popup functions
 function showMobilePopup() {
     const popup = document.getElementById('mobilePopup');
     if (popup) {
-        popup.style.display = 'block';
+        popup.classList.add('show');
     }
 }
 
 function closeMobilePopup() {
     const popup = document.getElementById('mobilePopup');
     if (popup) {
-        popup.style.display = 'none';
+        popup.classList.remove('show');
     }
 }
 
+// Make functions global
+window.showMobilePopup = showMobilePopup;
+window.closeMobilePopup = closeMobilePopup;
+
 // Show popup on mobile after 3 seconds
 document.addEventListener('DOMContentLoaded', () => {
+    // Animate stats
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+    
+    // Show mobile popup
     if (window.innerWidth <= 768) {
         setTimeout(() => {
             showMobilePopup();
         }, 3000);
     }
-});
-
-// Close popup when clicking on buttons
-document.addEventListener('DOMContentLoaded', () => {
+    
+    // Close popup when clicking on buttons
     const popupButtons = document.querySelectorAll('.mobile-popup-buttons .btn');
     popupButtons.forEach(button => {
         button.addEventListener('click', () => {
