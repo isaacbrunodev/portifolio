@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema ERP para Clínica Médica - Isaac Bruno Monte Santos</title>
+    <meta name="description" content="Implementação completa do Odoo ERP para clínica médica com módulos de agendamento, prontuário eletrônico, faturamento e integração com sistemas de pagamento.">
+    <meta name="keywords" content="ERP, Odoo, clínica médica, prontuário eletrônico, agendamento, faturamento, sistema médico">
+    <meta name="author" content="Isaac Bruno Monte Santos">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://isaacbruno.duckdns.org/projeto-erp-clinica.html">
+    <meta property="og:title" content="Sistema ERP para Clínica Médica - Isaac Bruno">
+    <meta property="og:description" content="Implementação completa do Odoo ERP para clínica médica com módulos de agendamento, prontuário eletrônico e faturamento.">
+    <meta property="og:image" content="https://isaacbruno.duckdns.org/images/erp-clinica.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://isaacbruno.duckdns.org/projeto-erp-clinica.html">
+    <meta property="twitter:title" content="Sistema ERP para Clínica Médica - Isaac Bruno">
+    <meta property="twitter:description" content="Implementação completa do Odoo ERP para clínica médica com módulos de agendamento, prontuário eletrônico e faturamento.">
+    <meta property="twitter:image" content="https://isaacbruno.duckdns.org/images/erp-clinica.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17115713340"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17115713340');
+    </script>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/performance.js" defer></script>
+    <script src="js/analytics.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="./index.html" class="logo" style="cursor: pointer;">Isaac Bruno Monte Santos</a>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+                <li role="none"><a href="sobre.html" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="servicos.html" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
+                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <ol>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li>Sistema ERP para Clínica Médica</li>
+            </ol>
+        </nav>
+
+        <section class="projeto-completo">
+            <header class="projeto-header">
+                <h1>Sistema ERP para Clínica Médica</h1>
+                <p class="projeto-subtitle">Implementação Completa do Odoo ERP com Módulos Médicos Personalizados</p>
+            </header>
+
+            <div class="projeto-imagens">
+                <div class="imagem-principal">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop&crop=center" alt="Sistema ERP para Clínica Médica" loading="lazy">
+                </div>
+            </div>
+
+            <div class="projeto-conteudo">
+                <div class="projeto-info">
+                    <h2>Sobre o Projeto</h2>
+                    <p>Este projeto envolveu a implementação completa de um sistema ERP baseado no Odoo para uma clínica médica de médio porte, com 15 médicos e 200+ pacientes ativos. O sistema foi customizado para atender às necessidades específicas do setor de saúde, incluindo conformidade com a LGPD e integração com sistemas de pagamento.</p>
+                    
+                    <h3>Desafios e Soluções</h3>
+                    <ul>
+                        <li><strong>Desafio:</strong> Gestão complexa de agendamentos com múltiplos médicos e especialidades.</li>
+                        <li><strong>Solução:</strong> Módulo de agendamento personalizado com integração ao calendário do Google e notificações automáticas.</li>
+                        
+                        <li><strong>Desafio:</strong> Prontuário eletrônico com histórico completo e acesso rápido.</li>
+                        <li><strong>Solução:</strong> Sistema de prontuário integrado com upload de exames, prescrições digitais e assinatura eletrônica.</li>
+                        
+                        <li><strong>Desafio:</strong> Faturamento complexo com diferentes convênios e modalidades de pagamento.</li>
+                        <li><strong>Solução:</strong> Módulo de faturamento automatizado com integração aos principais convênios médicos.</li>
+                        
+                        <li><strong>Desafio:</strong> Controle de estoque de medicamentos e materiais médicos.</li>
+                        <li><strong>Solução:</strong> Sistema de gestão de estoque com alertas de validade e reabastecimento automático.</li>
+                        
+                        <li><strong>Desafio:</strong> Relatórios gerenciais e compliance com LGPD.</li>
+                        <li><strong>Solução:</strong> Dashboard executivo com métricas em tempo real e sistema de auditoria completo.</li>
+                    </ul>
+                </div>
+
+                <div class="projeto-info">
+                    <h2>Tecnologias Utilizadas</h2>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Odoo 16</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Nginx</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">API REST</span>
+                        <span class="tech-tag">LGPD</span>
+                    </div>
+
+                    <h2>Módulos Implementados</h2>
+                    <div class="modulos-grid">
+                        <div class="modulo-item">
+                            <h4>📅 Agendamento Inteligente</h4>
+                            <p>Sistema de agendamento com disponibilidade em tempo real, lembretes automáticos e integração com calendários externos.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>📋 Prontuário Eletrônico</h4>
+                            <p>Histórico completo do paciente com upload de exames, prescrições digitais e assinatura eletrônica.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>💰 Faturamento Automatizado</h4>
+                            <p>Geração automática de faturas com integração aos principais convênios médicos e sistemas de pagamento.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>📊 Dashboard Executivo</h4>
+                            <p>Relatórios gerenciais em tempo real com métricas de performance, ocupação e faturamento.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>💊 Gestão de Estoque</h4>
+                            <p>Controle de medicamentos e materiais médicos com alertas de validade e reabastecimento.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>🔒 Compliance LGPD</h4>
+                            <p>Sistema de auditoria completo com controle de acesso e conformidade com a Lei Geral de Proteção de Dados.</p>
+                        </div>
+                    </div>
+
+                    <h2>Resultados Alcançados</h2>
+                    <div class="resultados-grid">
+                        <div class="resultado-item">
+                            <span class="resultado-numero">85%</span>
+                            <span class="resultado-descricao">Redução no Tempo de Agendamento</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">60%</span>
+                            <span class="resultado-descricao">Aumento na Eficiência Administrativa</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">100%</span>
+                            <span class="resultado-descricao">Conformidade com LGPD</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">40%</span>
+                            <span class="resultado-descricao">Redução de Erros de Faturamento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projeto-cta">
+                <p>Interessado em uma solução ERP personalizada para sua clínica ou empresa?</p>
+                <a href="contato.html" class="btn primary">Entre em Contato</a>
+                <a href="projetos.html" class="btn secondary">Ver Outros Projetos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/isaac-bruno-m-a5b990219/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/isaacbrunodev" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="copyright">&copy; <span id="year">2025</span> Isaac Bruno Monte Santos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

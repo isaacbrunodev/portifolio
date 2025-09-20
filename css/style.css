@@ -982,3 +982,41 @@ h3 {
         justify-content: center;
     }
 }
+
+/* Estilos para módulos do projeto */
+.modulos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.modulo-item {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.modulo-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.modulo-item h4 {
+    color: #00ffff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modulo-item p {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
