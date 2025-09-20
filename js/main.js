@@ -46,39 +46,41 @@ document.getElementById('year').textContent = new Date().getFullYear().toString(
 // Animate statistics
 function animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
+    console.log('Found', statNumbers.length, 'stat numbers to animate');
     
-    statNumbers.forEach(stat => {
+    statNumbers.forEach((stat, index) => {
         const target = parseInt(stat.getAttribute('data-target'));
-        const duration = 2000; // 2 seconds
-        const increment = target / (duration / 16); // 60fps
-        let current = 0;
+        console.log(`Animating stat ${index + 1}: 0 -> ${target}`);
         
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
+        const duration = 1500; // 1.5 seconds
+        const startTime = performance.now();
+        
+        function updateNumber(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(target * easeOut);
+            
+            stat.textContent = current;
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+            } else {
+                stat.textContent = target;
+                console.log(`Animation complete for stat ${index + 1}: ${target}`);
             }
-            stat.textContent = Math.floor(current);
-        }, 16);
+        }
+        
+        // Start animation with a small delay for each stat
+        setTimeout(() => {
+            requestAnimationFrame(updateNumber);
+        }, index * 200); // 200ms delay between each stat
     });
 }
 
-// Intersection Observer for stats animation
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateStats();
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
+// Intersection Observer removed - stats animate immediately on page load
 
 // Mobile popup functions
 function showMobilePopup() {
@@ -101,11 +103,13 @@ window.closeMobilePopup = closeMobilePopup;
 
 // Show popup on mobile after 3 seconds
 document.addEventListener('DOMContentLoaded', () => {
-    // Animate stats
-    const statsSection = document.querySelector('.stats');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
+    console.log('DOM loaded, animating stats immediately...');
+    
+    // Animate stats immediately when page loads
+    setTimeout(() => {
+        console.log('Starting stats animation...');
+        animateStats();
+    }, 500); // Small delay to ensure page is fully loaded
     
     // Show mobile popup
     if (window.innerWidth <= 768) {
