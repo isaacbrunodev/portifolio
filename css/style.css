@@ -1020,3 +1020,28 @@ h3 {
     line-height: 1.5;
     margin: 0;
 }
+
+/* Estilos para informações do site do projeto */
+.projeto-site {
+    background: rgba(0, 255, 163, 0.05);
+    border: 1px solid rgba(0, 255, 163, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.projeto-site p {
+    margin: 0.5rem 0;
+    color: #e0e0e0;
+}
+
+.projeto-site a {
+    color: #00ffa3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.projeto-site a:hover {
+    color: #00ffff;
+    text-decoration: underline;
+}

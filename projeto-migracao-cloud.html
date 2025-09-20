@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migração para Cloud com Docker - Isaac Bruno Monte Santos</title>
+    <meta name="description" content="Migração de aplicações legadas para ambiente cloud utilizando Docker e Kubernetes, implementando CI/CD e monitoramento automatizado para jobifull.com.">
+    <meta name="keywords" content="Docker, Kubernetes, cloud, migração, CI/CD, monitoramento, jobifull, DevOps, infraestrutura">
+    <meta name="author" content="Isaac Bruno Monte Santos">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://isaacbruno.duckdns.org/projeto-migracao-cloud.html">
+    <meta property="og:title" content="Migração para Cloud com Docker - Isaac Bruno">
+    <meta property="og:description" content="Migração de aplicações legadas para ambiente cloud utilizando Docker e Kubernetes para jobifull.com.">
+    <meta property="og:image" content="https://isaacbruno.duckdns.org/images/migracao-cloud.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://isaacbruno.duckdns.org/projeto-migracao-cloud.html">
+    <meta property="twitter:title" content="Migração para Cloud com Docker - Isaac Bruno">
+    <meta property="twitter:description" content="Migração de aplicações legadas para ambiente cloud utilizando Docker e Kubernetes para jobifull.com.">
+    <meta property="twitter:image" content="https://isaacbruno.duckdns.org/images/migracao-cloud.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17115713340"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17115713340');
+    </script>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/performance.js" defer></script>
+    <script src="js/analytics.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="./index.html" class="logo" style="cursor: pointer;">Isaac Bruno Monte Santos</a>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+                <li role="none"><a href="sobre.html" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="servicos.html" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
+                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <ol>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li>Migração para Cloud com Docker</li>
+            </ol>
+        </nav>
+
+        <section class="projeto-completo">
+            <header class="projeto-header">
+                <h1>Migração para Cloud com Docker</h1>
+                <p class="projeto-subtitle">Otimização de Infraestrutura e Migração para Cloud - jobifull.com</p>
+            </header>
+
+            <div class="projeto-imagens">
+                <div class="imagem-principal">
+                    <img src="images/migracao-cloud.jpg" alt="Migração para Cloud com Docker - jobifull.com" loading="lazy">
+                </div>
+            </div>
+
+            <div class="projeto-conteudo">
+                <div class="projeto-info">
+                    <h2>Sobre o Projeto</h2>
+                    <p>Este projeto envolveu a migração completa da infraestrutura do site <strong>jobifull.com</strong>, uma plataforma espanhola de empregos, de um ambiente on-premise para uma arquitetura cloud moderna utilizando Docker e Kubernetes. O projeto incluiu otimização de performance, implementação de CI/CD e monitoramento automatizado.</p>
+                    
+                    <h3>Desafios e Soluções</h3>
+                    <ul>
+                        <li><strong>Desafio:</strong> Aplicações legadas com dependências complexas e downtime mínimo.</li>
+                        <li><strong>Solução:</strong> Containerização com Docker e migração gradual usando blue-green deployment.</li>
+                        
+                        <li><strong>Desafio:</strong> Escalabilidade e alta disponibilidade para picos de tráfego.</li>
+                        <li><strong>Solução:</strong> Implementação de Kubernetes com auto-scaling horizontal e load balancing.</li>
+                        
+                        <li><strong>Desafio:</strong> Pipeline de CI/CD para deploy automatizado e seguro.</li>
+                        <li><strong>Solução:</strong> Integração com GitLab CI/CD com testes automatizados e rollback automático.</li>
+                        
+                        <li><strong>Desafio:</strong> Monitoramento e observabilidade em tempo real.</li>
+                        <li><strong>Solução:</strong> Stack de monitoramento com Prometheus, Grafana e alertas inteligentes.</li>
+                        
+                        <li><strong>Desafio:</strong> Otimização de custos e recursos na cloud.</li>
+                        <li><strong>Solução:</strong> Implementação de políticas de auto-scaling e otimização de recursos.</li>
+                    </ul>
+                </div>
+
+                <div class="projeto-info">
+                    <h2>Tecnologias Utilizadas</h2>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">GitLab CI</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Helm</span>
+                    </div>
+
+                    <h2>Arquitetura Implementada</h2>
+                    <div class="modulos-grid">
+                        <div class="modulo-item">
+                            <h4>🐳 Containerização</h4>
+                            <p>Migração de aplicações monolíticas para microserviços containerizados com Docker, garantindo portabilidade e consistência.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>☸️ Orquestração Kubernetes</h4>
+                            <p>Deploy e gerenciamento automatizado de containers com Kubernetes, incluindo auto-scaling e load balancing.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>🔄 CI/CD Pipeline</h4>
+                            <p>Pipeline automatizado com GitLab CI para build, test, deploy e rollback automático em caso de falhas.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>📊 Monitoramento</h4>
+                            <p>Stack completa de monitoramento com Prometheus, Grafana e alertas inteligentes para métricas de performance.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>🔒 Segurança</h4>
+                            <p>Implementação de políticas de segurança, secrets management e network policies para proteção da aplicação.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>💰 Otimização de Custos</h4>
+                            <p>Políticas de auto-scaling e otimização de recursos para reduzir custos operacionais em até 40%.</p>
+                        </div>
+                    </div>
+
+                    <h2>Resultados Alcançados</h2>
+                    <div class="resultados-grid">
+                        <div class="resultado-item">
+                            <span class="resultado-numero">99.9%</span>
+                            <span class="resultado-descricao">Uptime da Aplicação</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">70%</span>
+                            <span class="resultado-descricao">Melhoria na Performance</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">40%</span>
+                            <span class="resultado-descricao">Redução de Custos</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">5min</span>
+                            <span class="resultado-descricao">Tempo de Deploy</span>
+                        </div>
+                    </div>
+
+                    <h2>Site do Projeto</h2>
+                    <div class="projeto-site">
+                        <p><strong>Plataforma:</strong> <a href="https://jobifull.com" target="_blank" rel="noopener">jobifull.com</a></p>
+                        <p><strong>País:</strong> Espanha</p>
+                        <p><strong>Tipo:</strong> Plataforma de Empregos</p>
+                        <p><strong>Status:</strong> Produção - Ativo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projeto-cta">
+                <p>Interessado em uma migração para cloud ou otimização de infraestrutura?</p>
+                <a href="contato.html" class="btn primary">Entre em Contato</a>
+                <a href="projetos.html" class="btn secondary">Ver Outros Projetos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/isaac-bruno-m-a5b990219/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/isaacbrunodev" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="copyright">&copy; <span id="year">2025</span> Isaac Bruno Monte Santos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
