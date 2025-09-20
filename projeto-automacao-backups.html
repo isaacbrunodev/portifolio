@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Automação de Backups - Isaac Bruno Monte Santos</title>
+    <meta name="description" content="Desenvolvimento de sistema automatizado de backup com Python, incluindo verificação de integridade, notificações e restauração rápida para empresa confidencial.">
+    <meta name="keywords" content="backup, automação, Python, shell script, rsync, integridade, notificações, sistema">
+    <meta name="author" content="Isaac Bruno Monte Santos">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://isaacbruno.duckdns.org/projeto-automacao-backups.html">
+    <meta property="og:title" content="Sistema de Automação de Backups - Isaac Bruno">
+    <meta property="og:description" content="Desenvolvimento de sistema automatizado de backup com Python, incluindo verificação de integridade, notificações e restauração rápida.">
+    <meta property="og:image" content="https://isaacbruno.duckdns.org/images/automacao-backups.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://isaacbruno.duckdns.org/projeto-automacao-backups.html">
+    <meta property="twitter:title" content="Sistema de Automação de Backups - Isaac Bruno">
+    <meta property="twitter:description" content="Desenvolvimento de sistema automatizado de backup com Python, incluindo verificação de integridade, notificações e restauração rápida.">
+    <meta property="twitter:image" content="https://isaacbruno.duckdns.org/images/automacao-backups.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17115713340"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17115713340');
+    </script>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/performance.js" defer></script>
+    <script src="js/analytics.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="./index.html" class="logo" style="cursor: pointer;">Isaac Bruno Monte Santos</a>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+                <li role="none"><a href="sobre.html" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="servicos.html" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
+                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <ol>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li>Sistema de Automação de Backups</li>
+            </ol>
+        </nav>
+
+        <section class="projeto-completo">
+            <header class="projeto-header">
+                <h1>Sistema de Automação de Backups</h1>
+                <p class="projeto-subtitle">Desenvolvimento de Sistema Automatizado com Verificação de Integridade e Notificações</p>
+            </header>
+
+            <div class="projeto-imagens">
+                <div class="imagem-principal">
+                    <img src="images/automacao-backups.jpg" alt="Sistema de Automação de Backups" loading="lazy">
+                </div>
+            </div>
+
+            <div class="projeto-conteudo">
+                <div class="projeto-info">
+                    <h2>Sobre o Projeto</h2>
+                    <p>Este projeto envolveu o desenvolvimento de um sistema completo de automação de backups para uma <strong>empresa confidencial</strong> do setor financeiro, com mais de 50 servidores e 10TB de dados críticos. O sistema foi projetado para garantir a integridade dos dados, notificações em tempo real e restauração rápida em caso de falhas.</p>
+                    
+                    <h3>Desafios e Soluções</h3>
+                    <ul>
+                        <li><strong>Desafio:</strong> Backup de múltiplos servidores com diferentes sistemas operacionais.</li>
+                        <li><strong>Solução:</strong> Desenvolvimento de scripts Python multiplataforma com suporte a Linux, Windows e macOS.</li>
+                        
+                        <li><strong>Desafio:</strong> Verificação de integridade dos backups e detecção de corrupção.</li>
+                        <li><strong>Solução:</strong> Implementação de checksums MD5/SHA256 e validação automática de arquivos.</li>
+                        
+                        <li><strong>Desafio:</strong> Notificações em tempo real sobre status dos backups.</li>
+                        <li><strong>Solução:</strong> Integração com Telegram API e email para alertas instantâneos.</li>
+                        
+                        <li><strong>Desafio:</strong> Restauração rápida e confiável em caso de falhas.</li>
+                        <li><strong>Solução:</strong> Sistema de versionamento com snapshots incrementais e restauração seletiva.</li>
+                        
+                        <li><strong>Desafio:</strong> Otimização de espaço em disco e compressão eficiente.</li>
+                        <li><strong>Solução:</strong> Compressão inteligente com gzip e limpeza automática de backups antigos.</li>
+                        
+                        <li><strong>Desafio:</strong> Monitoramento e relatórios detalhados.</li>
+                        <li><strong>Solução:</strong> Dashboard web com métricas em tempo real e relatórios automatizados.</li>
+                    </ul>
+                </div>
+
+                <div class="projeto-info">
+                    <h2>Tecnologias Utilizadas</h2>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Shell Script</span>
+                        <span class="tech-tag">Rsync</span>
+                        <span class="tech-tag">Telegram API</span>
+                        <span class="tech-tag">Cron</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+
+                    <h2>Funcionalidades Implementadas</h2>
+                    <div class="modulos-grid">
+                        <div class="modulo-item">
+                            <h4>🔄 Backup Automatizado</h4>
+                            <p>Sistema de backup automático com agendamento flexível, suporte a múltiplos servidores e diferentes tipos de dados.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>✅ Verificação de Integridade</h4>
+                            <p>Validação automática de checksums MD5/SHA256 para garantir a integridade dos dados backupados.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>📱 Notificações Inteligentes</h4>
+                            <p>Alertas em tempo real via Telegram e email com status detalhado dos backups e falhas.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>⚡ Restauração Rápida</h4>
+                            <p>Sistema de restauração seletiva com snapshots incrementais e recuperação em minutos.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>📊 Monitoramento</h4>
+                            <p>Dashboard web com métricas em tempo real, histórico de backups e relatórios detalhados.</p>
+                        </div>
+                        <div class="modulo-item">
+                            <h4>🗜️ Otimização</h4>
+                            <p>Compressão inteligente, limpeza automática e otimização de espaço em disco.</p>
+                        </div>
+                    </div>
+
+                    <h2>Resultados Alcançados</h2>
+                    <div class="resultados-grid">
+                        <div class="resultado-item">
+                            <span class="resultado-numero">99.9%</span>
+                            <span class="resultado-descricao">Taxa de Sucesso dos Backups</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">85%</span>
+                            <span class="resultado-descricao">Redução no Tempo de Backup</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">5min</span>
+                            <span class="resultado-descricao">Tempo de Restauração</span>
+                        </div>
+                        <div class="resultado-item">
+                            <span class="resultado-numero">60%</span>
+                            <span class="resultado-descricao">Economia de Espaço</span>
+                        </div>
+                    </div>
+
+                    <h2>Informações do Projeto</h2>
+                    <div class="projeto-site">
+                        <p><strong>Cliente:</strong> Empresa Confidencial (Setor Financeiro)</p>
+                        <p><strong>Escopo:</strong> 50+ Servidores, 10TB+ de Dados</p>
+                        <p><strong>Duração:</strong> 3 meses</p>
+                        <p><strong>Status:</strong> Produção - Ativo</p>
+                        <p><strong>Confidencialidade:</strong> Detalhes técnicos protegidos por NDA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projeto-cta">
+                <p>Interessado em uma solução de backup automatizada para sua empresa?</p>
+                <a href="contato.html" class="btn primary">Entre em Contato</a>
+                <a href="projetos.html" class="btn secondary">Ver Outros Projetos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/isaac-bruno-m-a5b990219/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/isaacbrunodev" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="copyright">&copy; <span id="year">2025</span> Isaac Bruno Monte Santos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
