@@ -85,6 +85,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (statsSection) {
         observer.observe(statsSection);
     }
+}
+
+// Mobile menu toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            mobileMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
 });
 
 // Smooth scroll for anchor links
