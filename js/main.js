@@ -43,89 +43,32 @@ document.addEventListener('DOMContentLoaded', () => {
 // Update year in footer
 document.getElementById('year').textContent = new Date().getFullYear().toString();
 
-// Animate statistics
+// Animate statistics - SIMPLE VERSION
 function animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
-    console.log('Found', statNumbers.length, 'stat numbers to animate');
     
     statNumbers.forEach((stat, index) => {
         const target = parseInt(stat.getAttribute('data-target'));
-        console.log(`Animating stat ${index + 1}: 0 -> ${target}`);
         
-        const duration = 1500; // 1.5 seconds
-        const startTime = performance.now();
-        
-        function updateNumber(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            
-            // Easing function for smooth animation
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            const current = Math.floor(target * easeOut);
-            
-            stat.textContent = current;
-            
-            if (progress < 1) {
-                requestAnimationFrame(updateNumber);
-            } else {
-                stat.textContent = target;
-                console.log(`Animation complete for stat ${index + 1}: ${target}`);
+        let current = 0;
+        const increment = target / 50; // 50 steps
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
             }
-        }
-        
-        // Start animation with a small delay for each stat
-        setTimeout(() => {
-            requestAnimationFrame(updateNumber);
-        }, index * 200); // 200ms delay between each stat
+            stat.textContent = Math.floor(current);
+        }, 30); // 30ms per step
     });
 }
 
-// Intersection Observer removed - stats animate immediately on page load
-
-// Mobile popup functions
-function showMobilePopup() {
-    const popup = document.getElementById('mobilePopup');
-    if (popup) {
-        popup.classList.add('show');
-    }
-}
-
-function closeMobilePopup() {
-    const popup = document.getElementById('mobilePopup');
-    if (popup) {
-        popup.classList.remove('show');
-    }
-}
-
-// Make functions global
-window.showMobilePopup = showMobilePopup;
-window.closeMobilePopup = closeMobilePopup;
-
-// Show popup on mobile after 3 seconds
+// Animate stats when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, animating stats immediately...');
-    
-    // Animate stats immediately when page loads
+    // Animate stats after a short delay
     setTimeout(() => {
-        console.log('Starting stats animation...');
         animateStats();
-    }, 500); // Small delay to ensure page is fully loaded
-    
-    // Show mobile popup
-    if (window.innerWidth <= 768) {
-        setTimeout(() => {
-            showMobilePopup();
-        }, 3000);
-    }
-    
-    // Close popup when clicking on buttons
-    const popupButtons = document.querySelectorAll('.mobile-popup-buttons .btn');
-    popupButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            closeMobilePopup();
-        });
-    });
-});
+    }, 1000);
 });
 
 // Smooth scroll for anchor links
